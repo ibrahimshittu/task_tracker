@@ -24,10 +24,4 @@ Header.propTypes = {
     title: PropTypes.string.isRequired
 }
 
-// const headingStyle = {
-//     color: 'red',
-//     backgroundColor: '#000',
-//     padding: '10px'
-// }
-
 export default Header
