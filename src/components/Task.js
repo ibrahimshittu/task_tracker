@@ -4,7 +4,7 @@ import React from 'react'
 
 const Task = ({ task, onDelete, onToggle }) => {
     return (
-        <div className={`task ${task.reminder ? 'reminder': ''}`} onRightClick={() => onToggle(task.id)} >
+        <div className={`task ${task.reminder ? 'reminder': ''}`} onClick={() => onToggle(task.id)} >
             <h3>{task.title} <FaTimes style={ faTimesStyle } onClick={()=>onDelete(task.id) } /></h3>
             <p>{task.description}</p>
         </div>
