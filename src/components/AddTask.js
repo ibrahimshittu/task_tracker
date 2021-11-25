@@ -13,9 +13,6 @@ const AddTask = ({ onAdd }) => {
         if (!task) {
             alert("Please enter a task");
             return;
-        }  else if (!description) {
-            alert("Please enter a description");
-            return;
         }
 
         onAdd({
