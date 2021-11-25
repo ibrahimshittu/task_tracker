@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react'
 
 function App() {
@@ -10,6 +10,19 @@ function App() {
   const [showAddTask, setShowAddTask] = useState(false);
 
   const [tasks, setTasks] = useState([]);
+
+
+  // useEffect to call data from a json server 
+  useEffect(() => {
+    const  fetchTask =  async () => {
+      const response = await fetch("http://localhost:5000/tasks");
+      const data = await response.json()
+
+      console.log(data)
+    }
+
+    fetchTask()
+  }, [])
 
 
   // Add Task
